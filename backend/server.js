@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
-
+import reviewRoutes from "./routes/reviewRoutes.js";
 dotenv.config();
 
 const app = express();
@@ -15,6 +15,8 @@ app.use(cors());
 
 // Enables JSON parsing for POST requests
 app.use(express.json());
+
+app.use("/reviews", reviewRoutes)
 
 // Mongo connection /MongoDB using URI from .env file
 // console.log("Mongo URI:", process.env.MONGO_URI);

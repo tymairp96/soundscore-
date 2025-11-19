@@ -11,7 +11,14 @@ router.get("/", async (req, res) => {
   }
 });
 
-
+// POST a new review
+router.post("/", async (req, res) => {
+  try {
+    res.send("Creating a new music review...");
+  } catch (error) {
+    res.status(500).json({ message: "Error creating review " });
+  }
+});
 
 // Export router so server.js can use it
 export default router;

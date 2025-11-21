@@ -5,6 +5,10 @@ const reviewSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    songName: {
+        type:  String,
+        required: true,
+    },
     artistImage: {
         type: String, 
         required: false,

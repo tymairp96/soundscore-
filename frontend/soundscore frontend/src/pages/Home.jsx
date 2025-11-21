@@ -1,28 +1,26 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
-function Home () {
-    const [reviews, setReviews] = useState([]);
+function Home() {
+  const [reviews, setReviews] = useState([]);
 
-    useEffect(() => {
-        const fetchReviews = async () => {
-            try {
-                const res = await fetch ("http://localhost:5000/reviews");
-                const data = await res.json();
-                setReviews(data);
-            } catch (err) {
-                console.error(err);
-            }
-        };
-        fetchReviews();
-    }, []);
-    return (
-        <div>
-            <h1> </h1>
-            <p></p>
-        </div>
-    )
-
-};
-
+  useEffect(() => {
+    const fetchReviews = async () => {
+      try {
+        const res = await fetch("http://localhost:5000/reviews");
+        const data = await res.json();
+        setReviews(data);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    fetchReviews();
+  }, []);
+  return (
+    <div>
+      <h1> SoundScore </h1>
+      <p>Total Reviews: {reviews.length}</p>
+    </div>
+  );
+}
 
 export default Home;

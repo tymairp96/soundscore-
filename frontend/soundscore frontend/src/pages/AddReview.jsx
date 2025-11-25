@@ -11,11 +11,7 @@ function AddReview() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // validation
-    if (!artistName.trim() || !albumName.trim() || comment.trim()) {
-      alert("Artist, album, and comment cannot be empty.");
-      return;
-    }
+
 
     if (rating < 1 || rating > 5) {
       alert("Rating must be between 1 and 5.");

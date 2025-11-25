@@ -15,7 +15,7 @@ const reviewSchema = new mongoose.Schema({
     },
     albumName: {
         type: String,
-        required: true,
+        required: false,
     },
     rating: {
         type: Number,

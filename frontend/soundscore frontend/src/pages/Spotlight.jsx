@@ -26,9 +26,11 @@ function Spotlight () {
     if(!spotlightReview) return <p>Loading spotlight review...</p>;
 
     return(
-        <div>
-            <h1>Spotlight</h1>
+        <div className="spotlight-container">
+            <h1 className="spotlight-header">Spotlight Review</h1>
+            <div className="spotlight-card-wrapper">
             <NewsCard review={spotlightReview} />
+        </div>
         </div>
     );
 }

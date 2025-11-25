@@ -86,3 +86,14 @@ h1, h2, h3 {
     font-size: 20px;
    
   }
+
+  .add-review-form button {
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: gray;
+    color: whitesmoke;
+    border: none;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+  }

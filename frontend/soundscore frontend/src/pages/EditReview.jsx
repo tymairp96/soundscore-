@@ -63,10 +63,10 @@ function EditReview() {
   };
 
   return (
-    <div>
+    <div className="Add-review-container">
       <h1> Edit Review</h1>
 
-      <form onSubmit={handleSubmit}>
+      <form className="add-review-form" onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Artist Name"

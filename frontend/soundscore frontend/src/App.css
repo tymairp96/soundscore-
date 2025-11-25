@@ -2,4 +2,12 @@ body {
     font-family: 'Segoe UI', Tahoma,Geneva, Verdana, sans-serif;
     background:  whitesmoke;
     
+
 }
+
+h1, h2, h3 {
+    margin: 10px;
+  }
+  
+
+

@@ -28,4 +28,25 @@ h1, h2, h3 {
     padding: 15px;
     display: flex;
     flex-direction: column;
+    
   }
+
+  
+.review-card .Deletebttn {
+    margin-right: 5px;
+    margin-top: 10px;
+    padding: 5px 10px;
+  border: 1px solid ;
+  border-radius: 10px;
+  cursor: pointer;
+
+}
+
+.review-card .Editbttn{
+    margin-right: 5px;
+    margin-top: 10px;
+    padding: 5px 10px;
+  border: 1px solid ;
+  border-radius: 10px;
+  cursor: pointer;
+}

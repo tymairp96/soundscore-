@@ -38,9 +38,12 @@ function Home() {
 // Navigate to edit page
 const handleEdit = (id) => navigate (`/edit/${id}`);
 return (
-  <div className="review-container">
+    <div>
+  <div className="review-header">
     <h1> Your Reviews </h1>
     <p>Total Reviews: {reviews.length}</p>
+    </div>
+    <div className="review-container">
       {reviews.map((rev) => (
         <ReviewCard
          key={rev._id}
@@ -49,6 +52,7 @@ return (
          onDelete={() => handleDelete(rev._id)}
          />
       ))}
+  </div>
   </div>
 );
 }

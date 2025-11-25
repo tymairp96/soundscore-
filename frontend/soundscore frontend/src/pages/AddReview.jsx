@@ -44,9 +44,9 @@ function AddReview() {
   };
 
   return (
-    <div>
+    <div className="add-review-container">
       <h1> Add a New Review </h1>
-      <form onSubmit={handleSubmit}>
+      <form className="add-review-form" onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Artist Name"

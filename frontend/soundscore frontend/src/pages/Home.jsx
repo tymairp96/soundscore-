@@ -38,7 +38,7 @@ function Home() {
 // Navigate to edit page
 const handleEdit = (id) => navigate (`/edit/${id}`);
 return (
-  <div>
+  <div className="review-container">
     <h1> Your Reviews </h1>
     <p>Total Reviews: {reviews.length}</p>
       {reviews.map((rev) => (

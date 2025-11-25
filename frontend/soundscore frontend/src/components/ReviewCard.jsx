@@ -5,7 +5,7 @@ function ReviewCard({ review, onEdit, onDelete}) {
     <div className="review-card">
         {review.artistImage && (
             <img src={review.artistImage} alt={review.artistName} 
-            style={{ width: "100px", height: "100px", borderRadius: "8px" }}/>
+          />
         )}
 
       <h3>{review.artistName}</h3>
@@ -23,10 +23,13 @@ function ReviewCard({ review, onEdit, onDelete}) {
       <p>
         <strong>Comment:</strong> {review.comment}
       </p>
-
+       
       {/* buttons */}
+      <div className="bttn-group">
       <button onClick={onEdit} className="Editbttn">Edit</button>
+      
       <button onClick={onDelete} className="Deletebttn">Delete</button>
+    </div>
     </div>
   );
 }

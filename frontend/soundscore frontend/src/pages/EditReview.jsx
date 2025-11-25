@@ -4,8 +4,8 @@ import { useParams, useNavigate } from "react-router-dom";
 function EditReview() {
   // get the review id from the URL
   const { id } = useParams();
-  // allows navigation
   const navigate = useNavigate();
+  
 
   const [artistName, setArtistName] = useState("");
   const [albumName, setAlbumName] = useState("");
@@ -63,8 +63,8 @@ function EditReview() {
   };
 
   return (
-    <div className="Add-review-container">
-      <h1> Edit Review</h1>
+    <div className="add-review-container">
+      <h1 className="add-review-header">Edit Review</h1>
 
       <form className="add-review-form" onSubmit={handleSubmit}>
         <input

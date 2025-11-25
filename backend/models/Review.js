@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+// schema for a music review
 const reviewSchema = new mongoose.Schema({
     artistName: {
         type: String,
@@ -33,6 +33,9 @@ const reviewSchema = new mongoose.Schema({
     },
         
 });
+
+// Add an index 
+reviewSchema.index({ artistName: 1 });
 
 const Review = mongoose.model("Review", reviewSchema);
 

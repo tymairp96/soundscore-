@@ -12,15 +12,15 @@ function AddReview() {
     e.preventDefault();
 
 
-
+//  ratinng validation 
     if (rating < 1 || rating > 5) {
       alert("Rating must be between 1 and 5.");
       return;
     }
 
     try {
-      // create new review object
-
+        
+        // create new review object
       const newReview = { artistName, albumName, songName, rating, comment };
 
       // send POST request to backend

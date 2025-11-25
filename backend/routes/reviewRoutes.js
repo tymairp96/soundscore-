@@ -11,6 +11,7 @@ router.get("/", async (req, res) => {
     // Send reviews back to frontend
     res.json(reviews);
   } catch (error) {
+    // Handle Errors while fetching
     res.status(500).json({ message: "Error fetching reviews" });
   }
 });
@@ -22,6 +23,7 @@ router.get("/:id", async (req, res) => {
  if (!review) {
       return res.status(404).json({ message: "Review not found" });
     }
+    // send the found review 
     res.json(review);
   } catch (error) {
     res.status(500).json({ message: "Error fetching review" });
@@ -37,6 +39,7 @@ router.delete("/:id", async (req, res) => {
     if (!deletedReview) {
       return res.status(404).json({ message: "Review not found" });
     }
+    // send confirmation of deletion
     res.json({ message: "Review deleted successfully", deletedReview });
   } catch (error) {
     res.status(500).json({ message: "Error deleting review" });
@@ -48,7 +51,7 @@ router.put("/:id", async(req,res) => {
     try {
         const {id} = req.params;
         const {artistName, albumName, songName, rating, comment } = req.body;
-
+//  Find the review by ID and update with new data
         const updatedReview = await Review.findByIdAndUpdate(
             id,
             {artistName, albumName, songName, rating, comment},
@@ -68,7 +71,7 @@ router.post("/", async (req, res) => {
   try {
     const { artistName, albumName, songName, rating, comment } = req.body;
 
-    // validate input
+    // validate required f
     if (!artistName || !rating || !comment) {
       return res.status(400).json({ message: "Missing required fields" });
     }

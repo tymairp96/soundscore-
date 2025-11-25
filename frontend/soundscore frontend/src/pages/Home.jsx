@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 
 function Home() {
-    // store all reviews 
+   
   const [reviews, setReviews] = useState([]);
   const navigate = useNavigate();
 // grab reviews from the backend when the page loads 
@@ -31,7 +31,7 @@ function Home() {
     // 
     setReviews((prev) => prev.filter((rev) => rev._id !== id))
   } catch (err) {
-    console.error("Error delecting review:", err);
+    console.error("Error deleting review:", err);
   }
 };
 

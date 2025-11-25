@@ -2,6 +2,7 @@ body {
     font-family: 'Segoe UI', Tahoma,Geneva, Verdana, sans-serif;
     background:  whitesmoke;
     
+    
 
 }
 
@@ -55,24 +56,28 @@ h1, h2, h3 {
 .review-header  {
     text-align: center;
     margin-bottom: 20px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 1px 1px 2px;
   }
 
   /* AddReview Page */
   .add-review-container {
     max-width: 500px;
-    margin: 30px auto; /* centers the container */
+    margin: 30px auto;
     padding: 20px;
     background-color: whitesmoke;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .add-review-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 300px;
+    width: 100%;
     padding: 20px;
     background-color: whitesmoke;
     border-radius: 10px;
@@ -96,4 +101,30 @@ h1, h2, h3 {
     border: none;
     font-weight: bold;
     transition: background-color 0.2s ease;
+  }
+  .add-review-header {
+    text-align: center;
+    margin-bottom: 20px; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+  /* Spotlight page */
+  .spotlight-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .spotlight-header {
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: rgb(10, 10, 10);
+    text-shadow: 1px 1px 2px;
+  }
+
+  .spotlight-card-wrapper {
+    display: flex;
+    justify-content: center;
   }

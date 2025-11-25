@@ -2,6 +2,7 @@ import React from "react";
 
 function ReviewCard({ review, onEdit, onDelete}) {
   return (
+    // Artist image
     <div className="review-card">
         {review.artistImage && (
             <img src={review.artistImage} alt={review.artistName} 

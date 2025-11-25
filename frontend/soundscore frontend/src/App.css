@@ -10,6 +10,8 @@ h1, h2, h3 {
   }
 
   .review-container {
-    display: flex;       
+    display: flex; 
+    flex-wrap: wrap;
+       
    
   }

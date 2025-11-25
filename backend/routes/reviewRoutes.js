@@ -6,7 +6,7 @@ const router = express.Router();
 // GET all reviews
 router.get("/", async (req, res) => {
   try {
-    // Fetch all review from MondoDB
+    // Fetch all review from MongoDB
     const reviews = await Review.find();
     // Send reviews back to frontend
     res.json(reviews);

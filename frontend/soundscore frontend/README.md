@@ -1,16 +1,47 @@
-# React + Vite
+SoundScore
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+-SoundScore is a simple full-stack music review app. Users can add reviews for songs or albums, view all reviews, edit them, delete them, and check out the Spotlight page, which shows the highest-rated review.
 
-Currently, two official plugins are available:
+-What the App Does
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+View all reviews on the home page
 
-## React Compiler
+Add a new review with artist name, album, song, rating, and comment
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Edit or delete any review
 
-## Expanding the ESLint configuration
+Automatically highlight the highest-rated review in the Spotlight section
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-Tech Used
+Frontend
+
+React (Vite)
+
+React Router
+
+Bootstrap
+
+Custom CSS
+
+Backend
+
+Node.js + Express
+
+MongoDB + Mongoose
+
+REST API (GET, POST, PUT, DELETE)
+
+
+
+Environment variable: VITE_API_URL
+Used so the frontend can switch between local and deployed backend URLs without hardcoding them.
+
+-How It Works 
+
+The frontend uses fetch() to call backend endpoints.
+
+The backend communicates with MongoDB using Mongoose.
+
+The backend returns JSON, and React updates the UI with useState/useEffect.
+
+Spotlight uses .reduce() to pick the highest-rated review automatically.
